@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+        .container{
+            margin-top: 100px;
+        }
+        body {
+            background-image: url("/static/images/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        #ekle_butonu{
+            width:100%;
+            color: white;
+            display:block;
+            border:none;
+            padding:15px 20px;
+            border-radius:10px;
+            background:gray;
+            opacity: 0.4;
+        }
+        #yayin_ekle_butonu{
+            width:100%;
+            color: white;
+            display:block;
+            border:none;
+            padding:15px 20px;
+            border-radius:10px;
+            background:gray;
+            opacity: 0.4;
+        }
+        .form-control{
+            background:white;
+            opacity: 0.7;
+        }
+    </style>
+    <title>Admin Page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Yeni Kullanıcı Ekleme Paneli</a>
+          <a class="nav justify-content-end" href="/">Logout</a>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div id="register-box">
+            <div class="controls">
+                {% block content %}
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <p>{{messages[0]}}</p>
+                        {% endif %}
+                    {% endwith %}
+                {% endblock %}
+                <form method="POST">
+                <input type="text" name="arastirmaci_id" placeholder="Araştırmacı ID" class="form-control" />
+                <br>
+                <input type="text" name="arastirmaci_adi" placeholder="Araştırmacı Adı" class="form-control" />
+                <br>
+                <input type="text" name="arastirmaci_soyadi" placeholder="Araştırmacı Soyadı" class="form-control" />
+                <br>
+                <input type="text" name="yayin_adi" placeholder="Yayın Adı" class="form-control" />
+                <br>
+                <input type="text" name="yayin_yili" placeholder="Yayın Yılı" class="form-control" />
+                <br>
+                <input type="text" name="yayin_yeri" placeholder="Yayın Yeri" class="form-control" />
+                <br>
+                <input type="text" name="yayin_turu" placeholder="Yayın Turu" class="form-control" />
+                <br>
+                <button id="ekle_butonu" type="submit" name="ekle_butonu" class="btnbtn btn-outline-dark">Add User</button> 
+                <br>
+                <button id="yayin_ekle_butonu" type="submit" name="yayin_ekle_butonu" class="btnbtn btn-outline-dark">Add Publication</button>
+                </form>
+
+            </div><!-- /.controls -->
+        </div><!-- /#login-box -->
+    </div><!-- /.container -->
+</body>
+</html>

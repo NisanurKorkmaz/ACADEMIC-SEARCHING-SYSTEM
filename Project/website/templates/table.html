@@ -1,0 +1,31 @@
+<style>
+    .table{
+
+        background-color:white ;
+        opacity: 0.4;
+
+    }
+</style>
+
+<table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Araştırmacı ID</th>
+            <th>Araştırmacı Adı</th>
+            <th>Araştırmacı Soyadı</th>
+            <th>Yayın Adı</th>
+            <th>Yayın Yılı</th>
+            <th>Yayın Yeri</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for l in employee %}
+        <tr>
+            <td>{{l["id"]}}</td>
+            <td><a  href="{{url_for('auth.graph',istek=l['name'])}}">{{l["name"]}}</a></td>
+            <td>{{l["surname"]}}</td>
+            <td>{{l["yayinAdi"]}}</td>
+            <td>{{l["yayinYili"]}}</td>
+            <td>{{l["yayinYeri"]}}</td>
+        </tr>
+        {% endfor %}

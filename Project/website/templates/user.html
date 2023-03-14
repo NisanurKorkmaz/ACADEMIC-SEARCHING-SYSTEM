@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          load_data();
+          function load_data(query)
+          {
+           $.ajax({
+            url:"/ajaxlivesearch",
+            method:"POST",
+            data:{query:query},
+            success:function(data)
+            {
+              $('#result').html(data);
+              $("#result").append(data.htmlresponse);
+            }
+           });
+          }
+          $('#search_text').keyup(function(){
+            var search = $(this).val();
+            if(search != ''){
+            load_data(search);
+           }else{
+            load_data();
+           }
+          });
+        });
+        </script>
+
+
+
+    <style>
+        h2{
+            color:white;
+        }
+        th{
+            color:black;
+        }
+        h5{
+            color: black;
+        }
+        body {
+            background-image: url("/static/images/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container-search-table{
+            padding: 30px;
+            margin: 30px;
+        }
+        .search-table {
+            padding: 150px;
+            margin-top: -8%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            background: white;
+            opacity: 0.6;
+            border: 1px solid #ababab;
+            padding: 2%;
+            border-radius: 10px;
+        }
+
+        .search-box input:focus {
+            box-shadow: none;
+            border: 2px solid #eeeeee;
+        }
+
+        .search-list {
+            background: #fff;
+            border: 1px solid #ababab;
+            border-top: none;
+        }
+
+        .search-list h3 {
+            background: #eee;
+            padding: 3%;
+            color: #fe6f41;
+            margin-bottom: 0%;
+        }
+    </style>
+    <title>User Page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <!--<a class="navbar-brand" href="/graph">Show Graph</a>
+            <a class="navbar-brand" href="/alldatatable">Show Table</a>-->
+            <a class="nav justify-content-end" href="/">Logout</a>
+        </div>
+    </nav>
+    <div class="container-search-table">
+        <p>
+        <h2 align="center">Welcome to Searching Machine!</h2>
+        </p>
+        <div class="search-box">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Search All Values</h5>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="search_text" id="search_text" class="form-control"
+                        placeholder="Aradığınız araştırmacı ya da yayın adını yazınız">
+                </div>
+            </div>
+        </div>
+        <div id="result"></div>
+       
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
+
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+
+	body {
+		line-height: 1;
+	}
+	
+	body {
+		-webkit-text-size-adjust: none;
+	}
+
+	*, *:before, *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	body, input, select, textarea {
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 13pt;
+		font-weight: 200;
+		line-height: 1.65;
+	}
+
+
+	a {
+		-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		text-decoration: none;
+		border-bottom: dotted 1px;
+	}
+
+		a:hover {
+			border-bottom-color: transparent;
+		}
+
+	p {
+		margin: 0 0 2em 0;
+	}
+
+/* Header */
+
+	#header {
+		color: rgba(255, 255, 255, 0.75);
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		padding: 8em 0 6em 0;
+		text-align: center;
+		position: relative;
+		cursor: default;
+	}
+
+		#header input, #header select, #header textarea {
+			color: #ffffff;
+		}
+
+		#header a {
+			color: inherit;
+		}
+
+			#header a:hover {
+				color: #EF6480 !important;
+			}
+
+		#header strong, #header b {
+			color: #ffffff;
+		}
+
+		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: #ffffff;
+		}
+
+		#header blockquote {
+			border-left-color: #ffffff;
+		}
+
+		#header code {
+			background: rgba(255, 255, 255, 0.075);
+			border-color: #ffffff;
+		}
+
+		#header hr {
+			border-bottom-color: #ffffff;
+		}
+
+		#header:before {	
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.25);
+			background-image: url("images/overlay.png");
+		}
+
+		#header h1 {
+			margin-bottom: 0.5em;
+		}
+
+		#header .inner {
+			position: relative;
+			z-index: 1;
+		}
+
+		#header.alt {
+			height: 20em;
+			min-height: 20em;
+			min-height: 75vh;
+		}
+
+			#header.alt h1 {
+				font-size: 4em;
+				padding: 0 0.5em 0.25em 0.5em;
+				border-bottom: solid 2px #ffffff;
+				font-weight: 200;
+				font-family: "Pacifico", cursive;
+				text-transform: none;
+				letter-spacing: 0;
+			}
+
+			#header.alt p {
+				text-transform: uppercase;
+				letter-spacing: 0.325rem;
+				font-weight: 400;
+				font-size: 0.8em;
+				padding: 0 1.25em;
+			}
+
+			#header.alt .inner {
+				-moz-transition: opacity 2s ease;
+				-webkit-transition: opacity 2s ease;
+				-ms-transition: opacity 2s ease;
+				transition: opacity 2s ease;
+				opacity: 1;
+			}
+
+		
+
+		
+		
+
+	
+		
+	
