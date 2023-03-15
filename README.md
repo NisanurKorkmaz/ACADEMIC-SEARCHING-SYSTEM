@@ -7,6 +7,7 @@ There are two different interfaces for the application :
   - User interface: The part where the user will search for content and display the diagram (the graph).
 
 ## :gear: Technologies
+-[Neo4j](https://neo4j.com)
 
 ## :sparkles: Main Features
 
