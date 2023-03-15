@@ -1,7 +1,7 @@
 # ACADEMIC-SEARCHING-SYSTEM
 
 ## :calling: About
-
+Academic Search Engine is a desktop application that allows to reach academic studies and researchers.
 ## :gear: Technologies
 
 ## :sparkles: Main Features
