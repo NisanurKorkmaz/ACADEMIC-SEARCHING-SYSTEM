@@ -9,7 +9,11 @@ There are two different interfaces for the application :
 ## :gear: Technologies
   - [Neo4j](https://neo4j.com)
   - [JavaScript](https://www.javascript.com/)
-
+  - [Flask](https://flask.palletsprojects.com/en/2.2.x/)
+  - [Python](https://www.python.org)
+  - [CSS](https://www.w3schools.com/css/)
+  - [HTML](https://www.w3schools.com/html/)
+  
 ## :sparkles: Main Features
 
 ## :camera_flash: Screenshots
