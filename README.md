@@ -2,6 +2,10 @@
 
 ## :calling: About
 Academic Search Engine is a desktop application that allows to reach academic studies and researchers.
+There are two different interfaces for the application :
+  - Admin interface : The part to enter data into the database.
+  - User interface: The part where the user will search for content and display the diagram (the graph).
+
 ## :gear: Technologies
 
 ## :sparkles: Main Features
