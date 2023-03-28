@@ -13,8 +13,6 @@ There are two different interfaces for the application :
   - [Python](https://www.python.org)
   - [CSS](https://www.w3schools.com/css/)
   - [HTML](https://www.w3schools.com/html/)
-  
-## :sparkles: Main Features
 
 ## :camera_flash: Screenshots
 
